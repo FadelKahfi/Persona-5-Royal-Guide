@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>P5R Guide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src = "method.js"></script>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Persona 5 Royal Guide</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="classroom.html" class="nav-link">Classroom Answer</a></li>
+	          <li class="nav-item active"><a href="confidant.html" class="nav-link">Confidants</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+            <h1 class="mb-3 bread">Be More Social You Fools</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info justify-content-center">
+        	<div class="col-md-8">
+        		<div class="row mb-5">
+		          <div class="col-md-4 text-center py-4">
+		          	<div class="icon">
+		          		<span class="icon-map-o"></span>
+		          	</div>
+		            <p><span>Address:</span> Di mana ya bang aku juga gatau</p>
+		          </div>
+		          <div class="col-md-4 text-center border-height py-4">
+		          	<div class="icon">
+		          		<span class="icon-mobile-phone"></span>
+		          	</div>
+		            <p><span>Phone:</span> <a href="tel://1234567920">+62 8 berapa kak?</a></p>
+		          </div>
+		          <div class="col-md-4 text-center py-4">
+		          	<div class="icon">
+		          		<span class="icon-envelope-o"></span>
+		          	</div>
+		            <p><span>Email:</span> <a href="mailto:info@yoursite.com">apaya@gatau.com</a></p>
+		          </div>
+		        </div>
+          </div>
+        </div>
+
+        <!-- input form -->
+        <div class="row block-9 justify-content-center mb-5">
+          <div class="col-md-10 mb-md-10">
+          	<h2 class="text-center" style="font-weight: bold;">Input Your Order Here</h2>
+            <form id="orderForm" class="bg-light p-5 contact-form" onsubmit="return tampilModal()">
+              <p style="font-weight: bold">Choose Brand</p>
+              <div class="form-group">
+                <select class="form-control" placeholder="Brands Name" name="merk">
+                  <option merkName="Honda" value="15000000">Honda Beat Pop</option>
+                  <option merkName="Yamaha" value="14000000">Yamaha Freego</option>
+                  <option merkName="Suzuki" value="13000000">Suzuki Satria 2014</option>
+                  <option merkName="Honda" value="15000000">Honda Vario 110 eSP</option>
+                </select>
+              </div>
+              <div>
+              <p style="font-weight: bold">Additional Accesories</p>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" value="450000" name="Velg" onclick="hitungTotal()">   Velg Racing<br>
+                <input type="checkbox" value="250000" name="Helm" onclick="hitungTotal()">   Helm<br>
+                <input type="checkbox" value="300000" name="Jaket" onclick="hitungTotal()">  Jaket<br>
+              </div>
+              <p style="font-weight: bold">Payment Method</p>
+              <div class="form-group">
+                <input type="radio" name="pembayaran" value="Cash" onclick="hitungTotal()">  Cash<br>
+                <input type="radio" name="pembayaran" value="Credit Card" onclick="hitungTotal()">  Credit Card<br>
+              </div>
+              <span style="cursor: pointer; color: #fc983c;" onclick="resetForm()">
+                Reset Form
+              </span>
+              <div style="display: flex; justify-content: flex-end;">
+              <div class="form-group smaller-margin"> 
+                <p style="text-align: right;">Price</p>
+                <p id="harga" style="font-size: 15px; text-align: right;"></p>
+
+                <p style=" color: red;text-align: right;">Discount</p>
+                <p id="diskon" style=" font-size: 15px; color: red;text-align: right;"></p>
+                <p style="font-weight: bold;text-align: right;" padding="2px">Final Price</p> 
+                <p id="totalHarga" style="font-weight: bold; font-size: 25px;text-align: right;"></p>
+                <input type="submit" value="Order Now" class="btn btn-primary py-3 px-5">
+              </div>
+            </div>
+            </form>
+
+            <!-- pop up detail -->
+            <!-- <div id="purchaseDetailsModal" class="modal">
+              <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                <div id="purchaseDetailsContent"></div>
+              </div>
+            </div> -->
+            <div class="modal" id="purchaseDetailsModal">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-body">
+                          <div class="text-right"><i class="fa fa-times close" data-dismiss="modal"></i></div>          
+                          <div class="px-4 py-5">
+                              <a class="navbar-brand">Auto<span style="color: #f7b71d;">wheels</span></a>
+                              <h4 class="mt-5 theme-color mb-5">Thanks for your order</h4>
+          
+                              <span class="theme-color" style="font-weight: bold; text-align: center;">Payment Summary</span>
+                              <div class="mb-3" id="purchaseDetailsContent">
+                                  <hr class="new1">
+                              </div>
+                                       
+                              <div class="text-center mt-5">
+                                  <a href="index.html"><button class="btn btn-primary py-3 px-5" onclick="closeModal()">Close</button></a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br><br>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Me?</h2>
+              <p>Fuck it we ball.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://x.com/@einunendlich" target=blank><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://youtube.com/@einunendlich" target=blank><span class="icon-youtube"></span></a></li>
+                <li class="ftco-animate"><a href="https://instagram.com/@einunendlich" target=blank><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
